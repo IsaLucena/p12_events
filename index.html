@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>p12_events</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: ;
+        }
+        p{
+            font-family:'Italiana';
+            font-size: 5em;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+        }
+        #un{
+            background-color: goldenrod;
+            height: 100%;
+            width: 50%;
+            display: flex;
+
+            
+        }
+        #dos{
+            background-color: green;
+            display: flex;
+            height: 100%;
+            width: 50%;
+            display: flex;
+        }
+        @media (max width: 1024px){
+            .container{
+                flex-direction: column;
+            }
+            #un{
+               width: 100%; 
+            }
+            #dos{
+                width: 100%;
+            }
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+         //$("#un").hover(function(){
+        //      $("#un p").toggle();
+            //   });
+
+    //   $("#dos").hover(function(){
+          //     $("#dos p").toggle();
+            //    });
+        
+           // $("#un p").on("click", function(){
+             //    $("p").css("font-size","15em")
+            //});
+
+            //$("#dos p").on("mouseenter", function(){
+             //     $(this).css("width", "100%");
+            // $("#un").hide();
+          //  });
+          //$('#un').on('mouseleave', function() {
+              //$(this).css('background-color','black');
+             // $('#un p').css('color', 'white');   
+         // });
+          //$('#un').on('mouseenter', function() {
+             // $(this).css('background-color','white');
+              //$('#un p').css('color', 'black');   
+          //});
+
+          $('#un').on('mouseleave', function() {
+              $(this).css('background-color','black');
+                 
+          });
+        
+          
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div id="un">
+            <p>hola</p>
+        </div>
+        <div id="dos">
+            <p>mòn</p>
+        </div>
+    </div>
+</body>
+</html>
